@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>E&D</title>
+    
+    <!-- Scripts & CSS do Design System -->
+    <script src="assets/resource_3fa48481346f.es"></script>
+    <script src="assets/lucide_latest_2eebd0ebe8c2.es"></script>
+    <link href="assets/css2_85279f51aca0.css" rel="stylesheet"/>
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; }
+        ::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: #a3a3a3; }
+        
+        /* Swiper Custom Pagination */
+        .swiper-pagination-bullet { width: 10px; height: 10px; background: rgba(0,0,0,0.2); opacity: 1; transition: all 0.3s ease; margin: 0 6px !important; }
+        .swiper-pagination-bullet-active { background: #000; width: 32px; border-radius: 100px; }
+        
+        /* Efeito Fade no Texto */
+        .slide-content-block { opacity: 0; transform: translateY(20px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s; }
+        .swiper-slide-active .slide-content-block { opacity: 1; transform: translateY(0); }
+        
+        /* Otimização do Background com foco na parte útil da imagem */
+        .hero-slide-bg { width: 100%; height: 100%; background-size: cover; background-position: center; }
+        @media (min-width: 768px) {
+            /* No desktop, o gradiente lateral revela 55% da imagem (fading a partir dos 20%) */
+            .slide-bg-1 { background-image: linear-gradient(to right, #0ea5e9 0%, #0ea5e9 20%, rgba(14,165,233,0.85) 45%, transparent 70%), url('../../../assets/imgs/foto_vaga_hero1.jpg'); }
+            .slide-bg-2 { background-image: linear-gradient(to right, #0ea5e9 0%, #0ea5e9 20%, rgba(14,165,233,0.85) 45%, transparent 70%), url('../../../assets/imgs/foto_vaga_hero2.jpg'); }
+            .slide-bg-3 { background-image: linear-gradient(to right, #0ea5e9 0%, #0ea5e9 20%, rgba(14,165,233,0.85) 45%, transparent 70%), url('../../../assets/imgs/foto_vaga_hero3.jpg'); }
+            .slide-bg-4 { background-image: linear-gradient(to right, #0ea5e9 0%, #0ea5e9 20%, rgba(14,165,233,0.85) 45%, transparent 70%), url('../../../assets/imgs/foto_vaga_hero4.jpg'); }
+        }
+        @media (max-width: 767px) {
+            /* No mobile, o gradiente é vertical (revelando a foto embaixo onde não tem texto) */
+            .slide-bg-1 { background-image: linear-gradient(to bottom, #0ea5e9 0%, #0ea5e9 35%, rgba(14,165,233,0.85) 55%, transparent 85%), url('../../../assets/imgs/foto_vaga_hero1.jpg'); background-position: 60% center; }
+            .slide-bg-2 { background-image: linear-gradient(to bottom, #0ea5e9 0%, #0ea5e9 35%, rgba(14,165,233,0.85) 55%, transparent 85%), url('../../../assets/imgs/foto_vaga_hero2.jpg'); background-position: 60% center; }
+            .slide-bg-3 { background-image: linear-gradient(to bottom, #0ea5e9 0%, #0ea5e9 35%, rgba(14,165,233,0.85) 55%, transparent 85%), url('../../../assets/imgs/foto_vaga_hero3.jpg'); background-position: 60% center; }
+            .slide-bg-4 { background-image: linear-gradient(to bottom, #0ea5e9 0%, #0ea5e9 35%, rgba(14,165,233,0.85) 55%, transparent 85%), url('../../../assets/imgs/foto_vaga_hero4.jpg'); background-position: 60% center; }
+        }
+    </style>
+</head>
+<body class="bg-white text-neutral-900 antialiased selection:bg-[#0ea5e9] selection:text-black">
+
+<!-- Navigation (Exata estrutura do Design System) -->
+<nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-neutral-100">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
+                <i class="w-4 h-4 text-white" data-lucide="layers"></i>
+            </div>
+            <span class="text-lg font-medium tracking-tight">E&D - MÃO DE OBRA</span>
+        </div>
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-500">
+            <a class="hover:text-black transition-colors" href="#">Hotelaria</a>
+            <a class="hover:text-black transition-colors" href="#">Gastronomia</a>
+            <a class="hover:text-black transition-colors" href="#">Eventos</a>
+            <a class="hover:text-black transition-colors" href="#">Sobre nós</a>
+        </div>
+        <div class="flex items-center gap-4">
+            <a class="bg-[#0ea5e9] text-black text-sm font-medium px-5 py-2.5 rounded-full hover:bg-[#0284c7] transition-colors flex items-center gap-2" href="#">
+                <span>Fale Conosco</span>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main class="w-full overflow-hidden pb-32">
+    <!-- Hero Section -->
+    <section id="ds-hero">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 mt-4">
+            <!-- Container exato do Design System (paddings e rounded mantidos) -->
+            <div class="relative bg-[#0ea5e9] rounded-[2.5rem] p-8 md:p-16 overflow-hidden min-h-[650px] md:min-h-[750px] flex flex-col md:block">
+                
+                <!-- Swiper atuando dentro do container azul (absoluto para forçar preenchimento total do min-h) -->
+                <div class="swiper heroSwiper absolute inset-0 w-full h-full">
+                    <div class="swiper-wrapper">
+                        
+                        <!-- SLIDE 1 -->
+                        <div class="swiper-slide w-full h-full relative p-8 md:p-16 box-border">
+                            <!-- Fundo absoluto cobre o slide inteiro (que agora cobre o container azul todo) -->
+                            <div class="absolute inset-0 z-0 pointer-events-none rounded-[2.5rem] overflow-hidden">
+                                <div class="hero-slide-bg slide-bg-1"></div>
+                            </div>
+
+                            <div class="relative z-10 max-w-xl mt-8 md:mt-16 slide-content-block">
+                                <h1 class="text-4xl md:text-6xl font-medium tracking-tight leading-[1.1] mb-6 text-black">
+                                    A excelência que o <br/>seu hóspede merece.
+                                </h1>
+                                <p class="text-xl md:text-2xl font-normal text-neutral-800 mb-10 max-w-md leading-relaxed">
+                                    Terceirização premium de camareiras e governança. Equipes selecionadas para manter o padrão 5 estrelas.
+                                </p>
+                                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                                    <a class="bg-black text-white text-base font-medium px-7 py-3.5 rounded-full hover:bg-neutral-800 transition-transform hover:scale-105 flex items-center gap-2" href="#">
+                                        Solicitar Orçamento
+                                        <i class="w-5 h-5" data-lucide="arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 2 -->
+                        <div class="swiper-slide w-full h-full relative p-8 md:p-16 box-border">
+                            <div class="absolute inset-0 z-0 pointer-events-none rounded-[2.5rem] overflow-hidden">
+                                <div class="hero-slide-bg slide-bg-2"></div>
+                            </div>
+
+                            <div class="relative z-10 max-w-xl mt-8 md:mt-16 slide-content-block">
+                                <h1 class="text-4xl md:text-6xl font-medium tracking-tight leading-[1.1] mb-6 text-black">
+                                    Alta performance <br/>na sua cozinha.
+                                </h1>
+                                <p class="text-xl md:text-2xl font-normal text-neutral-800 mb-10 max-w-md leading-relaxed">
+                                    Fornecemos cozinheiros, auxiliares e stewards. Reduza custos mantendo a máxima segurança alimentar.
+                                </p>
+                                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                                    <a class="bg-black text-white text-base font-medium px-7 py-3.5 rounded-full hover:bg-neutral-800 transition-transform hover:scale-105 flex items-center gap-2" href="#">
+                                        Dimensionar Equipe
+                                        <i class="w-5 h-5" data-lucide="arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 3 -->
+                        <div class="swiper-slide w-full h-full relative p-8 md:p-16 box-border">
+                            <div class="absolute inset-0 z-0 pointer-events-none rounded-[2.5rem] overflow-hidden">
+                                <div class="hero-slide-bg slide-bg-3"></div>
+                            </div>
+
+                            <div class="relative z-10 max-w-xl mt-8 md:mt-16 slide-content-block">
+                                <h1 class="text-4xl md:text-6xl font-medium tracking-tight leading-[1.1] mb-6 text-black">
+                                    Serviço impecável <br/>que fideliza.
+                                </h1>
+                                <p class="text-xl md:text-2xl font-normal text-neutral-800 mb-10 max-w-md leading-relaxed">
+                                    Garçons, cumins e recepcionistas treinados para oferecer um atendimento sofisticado e ágil aos clientes.
+                                </p>
+                                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                                    <a class="bg-black text-white text-base font-medium px-7 py-3.5 rounded-full hover:bg-neutral-800 transition-transform hover:scale-105 flex items-center gap-2" href="#">
+                                        Falar com Especialista
+                                        <i class="w-5 h-5" data-lucide="arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- SLIDE 4 -->
+                        <div class="swiper-slide w-full h-full relative p-8 md:p-16 box-border">
+                            <div class="absolute inset-0 z-0 pointer-events-none rounded-[2.5rem] overflow-hidden">
+                                <div class="hero-slide-bg slide-bg-4"></div>
+                            </div>
+
+                            <div class="relative z-10 max-w-xl mt-8 md:mt-16 slide-content-block">
+                                <h1 class="text-4xl md:text-6xl font-medium tracking-tight leading-[1.1] mb-6 text-black">
+                                    Staff completo <br/>para seu evento.
+                                </h1>
+                                <p class="text-xl md:text-2xl font-normal text-neutral-800 mb-10 max-w-md leading-relaxed">
+                                    Mão de obra sob demanda para feiras, congressos e eventos corporativos. Confiança e escalabilidade.
+                                </p>
+                                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+                                    <a class="bg-black text-white text-base font-medium px-7 py-3.5 rounded-full hover:bg-neutral-800 transition-transform hover:scale-105 flex items-center gap-2" href="#">
+                                        Consultar Agendas
+                                        <i class="w-5 h-5" data-lucide="arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    
+                    <!-- Paginação do Slider posicionada respeitando o padding do slide -->
+                    <div class="swiper-pagination absolute bottom-0 left-0 w-full flex justify-start z-20 pb-8 md:pb-16 px-8 md:px-16"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+    
+    // Initialize Swiper
+    const swiper = new Swiper('.heroSwiper', {
+        effect: 'fade',
+        fadeEffect: { crossFade: true },
+        speed: 1200,
+        autoplay: { delay: 5500, disableOnInteraction: false },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        loop: true,
+        grabCursor: true
+    });
+</script>
+</body>
+</html>

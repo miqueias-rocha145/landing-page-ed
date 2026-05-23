@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Design System - CONDOR</title>
+<script src="assets/resource_3fa48481346f.es"></script>
+<script src="assets/lucide_latest_2eebd0ebe8c2.es"></script>
+<link href="assets/css2_85279f51aca0.css" rel="stylesheet"/>
+<style>
+body { font-family: 'Plus Jakarta Sans', sans-serif; }
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #d4d4d4; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a3a3a3; }
+.toggle-checkbox:checked {
+right: 0;
+border-color: #0ea5e9;
+}
+.toggle-checkbox:checked + .toggle-label {
+background-color: #0ea5e9;
+}
+</style><style data-scroll-fix="true">
+        /* Scroll fixes for offline viewing */
+        html, body {
+            overflow: auto !important;
+            overflow-x: hidden !important;
+            height: auto !important;
+            min-height: 100% !important;
+            scroll-behavior: smooth;
+        }
+        </style></head>
+<body class="bg-white text-neutral-900 antialiased selection:bg-[#0ea5e9] selection:text-black">
+
+<!-- Navigation -->
+<nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-neutral-100">
+<div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-black flex items-center justify-center">
+<i class="w-4 h-4 text-white" data-lucide="layers"></i>
+</div>
+<span class="text-lg font-medium tracking-tight">Design System</span>
+</div>
+<div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-500">
+<a class="hover:text-black transition-colors" href="#ds-hero">Hero</a>
+<a class="hover:text-black transition-colors" href="#ds-typography">Typography</a>
+<a class="hover:text-black transition-colors" href="#ds-colors">Colors</a>
+<a class="hover:text-black transition-colors" href="#ds-components">Components</a>
+<a class="hover:text-black transition-colors" href="#ds-layout">Layout</a>
+<a class="hover:text-black transition-colors" href="#ds-motion">Motion</a>
+<a class="hover:text-black transition-colors" href="#ds-icons">Icons</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="bg-[#0ea5e9] text-black text-sm font-medium px-5 py-2.5 rounded-full hover:bg-[#0284c7] transition-colors flex items-center gap-2" href="index.html">
+<i class="w-4 h-4" data-lucide="arrow-left"></i>
+<span>Voltar ao Site</span>
+</a>
+</div>
+</div>
+</nav>
+
+<main class="w-full overflow-hidden pb-32">
+
+<!-- 0) Hero Section (Exact Clone) -->
+<section id="ds-hero">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 mt-4">
+<div class="relative bg-[#0ea5e9] rounded-[2.5rem] p-8 md:p-16 overflow-hidden min-h-[650px] md:min-h-[750px] flex flex-col md:block">
+<!-- Hero Content -->
+<div class="relative z-10 max-w-xl mt-8 md:mt-16">
+<h1 class="text-4xl md:text-6xl font-medium tracking-tight leading-[1.1] mb-6">
+                        O Design System <br/>
+                        para o futuro.
+                        <span class="inline-block relative top-[-5px]">
+<i class="w-10 h-10 text-black/80" data-lucide="layers"></i>
+</span>
+</h1>
+<p class="text-xl md:text-2xl font-normal text-neutral-800 mb-10 max-w-md leading-relaxed">
+                        Documentação oficial dos padrões de interface, componentes, tipografia e cores da plataforma CONDOR.
+                    </p>
+<div class="flex flex-col sm:flex-row items-start sm:items-center gap-6">
+<a class="bg-black text-white text-base font-medium px-7 py-3.5 rounded-full hover:bg-neutral-800 transition-transform hover:scale-105 flex items-center gap-2" href="#ds-components">
+<i class="w-5 h-5" data-lucide="component"></i>
+                            Ver Componentes
+                        </a>
+<a class="text-base font-medium flex items-center gap-2 group hover:text-neutral-700" href="#ds-typography">
+<div class="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center">
+<i class="w-4 h-4 ml-0.5" data-lucide="book-open"></i>
+</div>
+                            Ver Documentação
+                        </a>
+</div>
+<!-- Decorative Road Line -->
+<div class="absolute right-0 top-1/4 hidden md:block opacity-60">
+<svg fill="none" height="120" stroke="black" stroke-dasharray="8 8" stroke-width="2" viewbox="0 0 100 100" width="120">
+<path d="M10,10 Q50,10 50,50 T90,90" stroke-linecap="round"></path>
+</svg>
+</div>
+</div>
+<!-- Hero Phones Mockup -->
+<div class="relative md:absolute md:top-12 md:-right-20 mt-12 md:mt-0 flex justify-center md:block transform scale-90 md:scale-100">
+<!-- Back Phone (Instructor Map) -->
+<div class="absolute top-0 -left-20 md:-left-32 w-[280px] h-[580px] bg-white rounded-[3rem] border-[8px] border-white shadow-2xl rotate-[-6deg] overflow-hidden hidden lg:block opacity-90 z-0">
+<div class="px-6 py-6 bg-neutral-50 border-b border-neutral-100">
+<div class="flex justify-between items-center mb-4">
+<span class="text-xl font-medium tracking-tight">Explorar</span>
+<i class="w-5 h-5 text-neutral-400" data-lucide="map"></i>
+</div>
+<div class="w-full bg-white h-10 rounded-xl border border-neutral-200 flex items-center px-3 gap-2">
+<i class="w-4 h-4 text-neutral-400" data-lucide="search"></i>
+<span class="text-sm text-neutral-400">Buscar instrutor...</span>
+</div>
+</div>
+<div class="relative h-full bg-neutral-100">
+<!-- Mock Map -->
+<div class="absolute top-10 left-10 p-2 bg-black rounded-lg shadow-lg z-10">
+<i class="w-5 h-5 text-[#0ea5e9]" data-lucide="car"></i>
+</div>
+<div class="absolute top-32 right-12 p-2 bg-white rounded-lg shadow-lg z-10">
+<i class="w-5 h-5 text-neutral-500" data-lucide="car"></i>
+</div>
+<div class="absolute bottom-32 left-1/2 -translate-x-1/2 w-[90%] bg-white p-3 rounded-xl shadow-xl">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-neutral-200 flex items-center justify-center overflow-hidden">
+<i class="w-5 h-5 text-neutral-500" data-lucide="user"></i>
+</div>
+<div>
+<p class="text-sm font-medium">Carlos Silva</p>
+<p class="text-xs text-neutral-500">Instrutor Credenciado</p>
+</div>
+<div class="ml-auto text-xs bg-[#0ea5e9] px-2 py-1 rounded font-bold">4.9 ★</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Front Phone (Student App) -->
+<div class="relative w-[300px] h-[600px] bg-black rounded-[3.5rem] border-[10px] border-black shadow-2xl z-10 overflow-hidden">
+<!-- Notch area -->
+<div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-b-2xl z-20"></div>
+<!-- Screen Content -->
+<div class="w-full h-full bg-black text-white pt-10 px-6 flex flex-col">
+<!-- Header -->
+<div class="flex justify-between items-start mb-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-black"><i class="w-5 h-5" data-lucide="steering-wheel"></i></div>
+<div>
+<h3 class="text-lg font-medium leading-none">Minha Aula</h3>
+<span class="text-xs text-neutral-500">Hoje, 14:00</span>
+</div>
+</div>
+</div>
+<!-- Car Image Placeholder -->
+<div class="relative w-full h-48 bg-neutral-800 rounded-2xl mb-6 overflow-hidden group">
+<div class="absolute inset-0 bg-neutral-700 flex items-center justify-center">
+<i class="w-16 h-16 text-neutral-500 opacity-50" data-lucide="car-front"></i>
+</div>
+<div class="absolute top-3 right-3 bg-[#0ea5e9] px-3 py-1 rounded-lg">
+<span class="text-xs font-bold text-black">Homologado</span>
+</div>
+<div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm px-3 py-1 rounded-lg">
+<span class="text-xs font-medium text-white">Fiat Mobi • CFC Central</span>
+</div>
+</div>
+<!-- Instructor Info -->
+<div class="mb-6">
+<div class="flex items-center gap-2 mb-2">
+<span class="w-2 h-2 rounded-full bg-green-500"></span>
+<span class="text-xs text-neutral-400 uppercase tracking-wider">Instrutor Confirmado</span>
+</div>
+<h2 class="text-2xl font-medium tracking-tight text-white">Roberto Mendes</h2>
+<span class="text-[#0ea5e9] text-sm font-medium">Autônomo Verificado</span>
+</div>
+<!-- Steps -->
+<div class="space-y-3 mb-6">
+<div class="bg-neutral-900 rounded-xl p-3 flex gap-3 items-center border border-neutral-800">
+<div class="bg-neutral-800 p-2 rounded-lg text-[#0ea5e9]"><i class="w-4 h-4" data-lucide="map-pin"></i></div>
+<div class="text-sm text-neutral-300">Ponto de Encontro: Shopping Norte</div>
+</div>
+<div class="bg-neutral-900 rounded-xl p-3 flex gap-3 items-center border border-neutral-800">
+<div class="bg-neutral-800 p-2 rounded-lg text-[#0ea5e9]"><i class="w-4 h-4" data-lucide="wallet"></i></div>
+<div class="text-sm text-neutral-300">Valor da Aula: R$ 60,00</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="mt-auto pb-8 flex gap-3">
+<button class="flex-1 bg-neutral-800 hover:bg-neutral-700 text-white font-medium py-3 rounded-xl transition-colors text-sm">Cancelar</button>
+<button class="flex-1 bg-[#0ea5e9] hover:bg-[#0284c7] text-black font-medium py-3 rounded-xl transition-colors text-sm">Iniciar Aula</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- 1) Typography -->
+<section id="ds-typography" class="max-w-7xl mx-auto px-6 mt-24">
+    <h2 class="text-3xl font-medium tracking-tight mb-8 border-b border-neutral-100 pb-4">1. Typography</h2>
+    <div class="flex flex-col gap-8">
+        <!-- Headings -->
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-4xl md:text-6xl font-medium tracking-tight leading-[1.1]">Heading 1</div>
+            <div class="text-sm text-neutral-400">text-4xl md:text-6xl</div>
+        </div>
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-3xl md:text-5xl font-medium tracking-tight">Heading 2</div>
+            <div class="text-sm text-neutral-400">text-3xl md:text-5xl</div>
+        </div>
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-3xl md:text-4xl font-medium tracking-tight">Heading 3</div>
+            <div class="text-sm text-neutral-400">text-3xl md:text-4xl</div>
+        </div>
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-2xl font-medium">Heading 4</div>
+            <div class="text-sm text-neutral-400">text-2xl</div>
+        </div>
+        <!-- Bold / Medium -->
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-xl font-medium">Medium L</div>
+            <div class="text-sm text-neutral-400">text-xl font-medium</div>
+        </div>
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-lg font-medium tracking-tight">Medium M</div>
+            <div class="text-sm text-neutral-400">text-lg font-medium</div>
+        </div>
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-base font-medium">Medium S</div>
+            <div class="text-sm text-neutral-400">text-base font-medium</div>
+        </div>
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-sm font-semibold">Semibold XS</div>
+            <div class="text-sm text-neutral-400">text-sm font-semibold</div>
+        </div>
+        <!-- Paragraphs / Regular -->
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-xl md:text-2xl font-normal text-neutral-800 leading-relaxed">Paragraph Lead</div>
+            <div class="text-sm text-neutral-400">text-xl md:text-2xl</div>
+        </div>
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-lg text-neutral-500 leading-relaxed">Paragraph Large</div>
+            <div class="text-sm text-neutral-400">text-lg</div>
+        </div>
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-base text-neutral-500 leading-relaxed">Paragraph Regular</div>
+            <div class="text-sm text-neutral-400">text-base</div>
+        </div>
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-sm text-neutral-500 leading-relaxed">Paragraph Small</div>
+            <div class="text-sm text-neutral-400">text-sm</div>
+        </div>
+        <div class="flex justify-between items-end border-b border-neutral-50 pb-4">
+            <div class="text-xs text-neutral-500 leading-relaxed">Paragraph XS</div>
+            <div class="text-sm text-neutral-400">text-xs</div>
+        </div>
+    </div>
+</section>
+
+<!-- 2) Colors & Surfaces -->
+<section id="ds-colors" class="max-w-7xl mx-auto px-6 mt-24">
+    <h2 class="text-3xl font-medium tracking-tight mb-8 border-b border-neutral-100 pb-4">2. Colors & Surfaces</h2>
+    
+    <h3 class="text-xl font-medium mb-4">Backgrounds & Brand</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+        <div class="rounded-2xl border border-neutral-200 overflow-hidden">
+            <div class="h-24 bg-[#0ea5e9]"></div>
+            <div class="p-3 text-sm"><p class="font-medium">Primary Accent</p><p class="text-neutral-500">bg-[#0ea5e9]</p></div>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 overflow-hidden">
+            <div class="h-24 bg-black"></div>
+            <div class="p-3 text-sm"><p class="font-medium">Black</p><p class="text-neutral-500">bg-black</p></div>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 overflow-hidden">
+            <div class="h-24 bg-white"></div>
+            <div class="p-3 text-sm"><p class="font-medium">White</p><p class="text-neutral-500">bg-white</p></div>
+        </div>
+    </div>
+
+    <h3 class="text-xl font-medium mb-4">Neutrals (Backgrounds)</h3>
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-8">
+        <div class="rounded-2xl border border-neutral-200 overflow-hidden">
+            <div class="h-16 bg-neutral-50"></div>
+            <div class="p-3 text-sm"><p class="font-medium">Neutral 50</p></div>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 overflow-hidden">
+            <div class="h-16 bg-neutral-100"></div>
+            <div class="p-3 text-sm"><p class="font-medium">Neutral 100</p></div>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 overflow-hidden">
+            <div class="h-16 bg-neutral-800"></div>
+            <div class="p-3 text-sm"><p class="font-medium">Neutral 800</p></div>
+        </div>
+        <div class="rounded-2xl border border-neutral-200 overflow-hidden">
+            <div class="h-16 bg-neutral-900"></div>
+            <div class="p-3 text-sm"><p class="font-medium">Neutral 900</p></div>
+        </div>
+    </div>
+    
+    <h3 class="text-xl font-medium mb-4">Text Colors</h3>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 bg-neutral-50 p-6 rounded-2xl">
+        <div><p class="text-black font-medium text-lg">Text Black</p><p class="text-xs text-neutral-500">text-black</p></div>
+        <div><p class="text-neutral-900 font-medium text-lg">Text Neutral 900</p><p class="text-xs text-neutral-500">text-neutral-900</p></div>
+        <div><p class="text-neutral-800 font-medium text-lg">Text Neutral 800</p><p class="text-xs text-neutral-500">text-neutral-800</p></div>
+        <div><p class="text-neutral-500 font-medium text-lg">Text Neutral 500</p><p class="text-xs text-neutral-500">text-neutral-500</p></div>
+        <div class="bg-black p-2 rounded-lg mt-4"><p class="text-white font-medium text-lg">Text White</p><p class="text-xs text-neutral-400">text-white</p></div>
+        <div class="bg-black p-2 rounded-lg mt-4"><p class="text-neutral-300 font-medium text-lg">Text Neutral 300</p><p class="text-xs text-neutral-400">text-neutral-300</p></div>
+        <div class="bg-black p-2 rounded-lg mt-4"><p class="text-neutral-400 font-medium text-lg">Text Neutral 400</p><p class="text-xs text-neutral-400">text-neutral-400</p></div>
+        <div class="bg-black p-2 rounded-lg mt-4"><p class="text-[#0ea5e9] font-medium text-lg">Text Accent</p><p class="text-xs text-neutral-400">text-[#0ea5e9]</p></div>
+    </div>
+
+    <h3 class="text-xl font-medium mb-4">Glass & Overlays</h3>
+    <div class="relative bg-neutral-100 h-48 rounded-2xl flex items-center justify-center p-6 gap-6 overflow-hidden">
+        <div class="absolute inset-0 bg-white/20 blur-2xl"></div>
+        <div class="relative z-10 bg-white/80 backdrop-blur-md border border-neutral-100 p-6 rounded-xl shadow-sm w-1/2">
+            <p class="font-medium text-sm">Glass Navbar Effect</p>
+            <p class="text-xs text-neutral-500">bg-white/80 backdrop-blur-md</p>
+        </div>
+        <div class="relative z-10 bg-black/60 backdrop-blur-sm p-6 rounded-xl shadow-sm w-1/2">
+            <p class="font-medium text-white text-sm">Dark Glass Badge Effect</p>
+            <p class="text-xs text-neutral-400">bg-black/60 backdrop-blur-sm</p>
+        </div>
+    </div>
+</section>
+
+<!-- 3) UI Components -->
+<section id="ds-components" class="max-w-7xl mx-auto px-6 mt-24">
+    <h2 class="text-3xl font-medium tracking-tight mb-8 border-b border-neutral-100 pb-4">3. UI Components</h2>
+    
+    <div class="space-y-12">
+        <!-- Buttons -->
+        <div>
+            <h3 class="text-xl font-medium mb-6">Buttons</h3>
+            <div class="flex flex-wrap gap-8 items-end bg-neutral-50 p-8 rounded-2xl border border-neutral-100">
+                <!-- Primary Normal -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-xs text-neutral-500">Primary Nav</span>
+                    <button class="bg-black text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-neutral-800 transition-colors flex items-center gap-2">
+                        <span>Entrar na Lista</span>
+                        <i class="w-4 h-4" data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <!-- Primary Large -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-xs text-neutral-500">Primary Hero (Hover scale)</span>
+                    <button class="bg-black text-white text-base font-medium px-7 py-3.5 rounded-full hover:bg-neutral-800 transition-transform hover:scale-105 flex items-center gap-2">
+                        <i class="w-5 h-5" data-lucide="clipboard-list"></i>
+                        Quero me cadastrar
+                    </button>
+                </div>
+                <!-- Accent Card Button -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-xs text-neutral-500">Accent Inner</span>
+                    <button class="bg-[#0ea5e9] hover:bg-[#0284c7] text-black font-medium px-6 py-3 rounded-xl transition-colors text-sm">
+                        Iniciar Aula
+                    </button>
+                </div>
+                <!-- Dark Card Button -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-xs text-neutral-500">Dark Inner</span>
+                    <button class="bg-neutral-800 hover:bg-neutral-700 text-white font-medium px-6 py-3 rounded-xl transition-colors text-sm">
+                        Cancelar
+                    </button>
+                </div>
+                <!-- Ghost Link -->
+                <div class="flex flex-col gap-2">
+                    <span class="text-xs text-neutral-500">Ghost / Link</span>
+                    <a href="#" class="text-base font-medium flex items-center gap-2 group hover:text-neutral-700">
+                        <div class="w-8 h-8 rounded-full border-2 border-black flex items-center justify-center">
+                            <i class="w-4 h-4 ml-0.5" data-lucide="info"></i>
+                        </div>
+                        Entenda a Resolução
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inputs & Controls -->
+        <div>
+            <h3 class="text-xl font-medium mb-6">Inputs & Controls</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 bg-neutral-50 p-8 rounded-2xl border border-neutral-100">
+                <!-- Text Input -->
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-sm font-medium text-neutral-700 mb-1">Default Input</label>
+                        <input type="text" placeholder="Digite seu nome" class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-black focus:ring-0 outline-none transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-neutral-700 mb-1">Select Field</label>
+                        <select class="w-full px-4 py-3 rounded-xl border border-neutral-200 focus:border-black focus:ring-0 outline-none transition-colors bg-white">
+                            <option value="" disabled selected>Select option</option>
+                            <option value="1">Option 1</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Radio Cards -->
+                <div>
+                    <label class="block text-sm font-medium text-neutral-700 mb-2">Radio Cards</label>
+                    <div class="grid grid-cols-2 gap-4">
+                        <label class="cursor-pointer">
+                            <input type="radio" name="ds_profile" value="1" class="peer sr-only" checked>
+                            <div class="border-2 border-neutral-200 rounded-xl p-4 text-center peer-checked:border-black peer-checked:bg-neutral-50 transition-all">
+                                <i class="w-6 h-6 mx-auto mb-2 text-neutral-400 peer-checked:text-black" data-lucide="graduation-cap"></i>
+                                <span class="block text-sm font-medium">Selected</span>
+                            </div>
+                        </label>
+                        <label class="cursor-pointer">
+                            <input type="radio" name="ds_profile" value="2" class="peer sr-only">
+                            <div class="border-2 border-neutral-200 rounded-xl p-4 text-center peer-checked:border-black peer-checked:bg-neutral-50 transition-all">
+                                <i class="w-6 h-6 mx-auto mb-2 text-neutral-400 peer-checked:text-black" data-lucide="briefcase"></i>
+                                <span class="block text-sm font-medium">Default</span>
+                            </div>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cards -->
+        <div>
+            <h3 class="text-xl font-medium mb-6">Cards & Containers</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Light Feature Card -->
+                <div class="bg-neutral-50 rounded-[2.5rem] p-10 border border-neutral-100">
+                    <div class="flex items-center gap-4 mb-8">
+                        <div class="w-14 h-14 rounded-full bg-black text-white flex items-center justify-center">
+                            <i class="w-7 h-7" data-lucide="graduation-cap"></i>
+                        </div>
+                        <h3 class="text-2xl font-medium">Light Card Pattern</h3>
+                    </div>
+                    <ul class="space-y-6">
+                        <li class="flex gap-4 items-start">
+                            <div class="mt-1 bg-[#0ea5e9] rounded-full p-1"><i class="w-3 h-3 text-black" data-lucide="check"></i></div>
+                            <div>
+                                <h4 class="font-medium text-lg">List Item Pattern</h4>
+                                <p class="text-neutral-500 mt-1">Light text description here.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Dark Feature Card -->
+                <div class="bg-black text-white rounded-[2.5rem] p-10 border border-neutral-800 relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-[#0ea5e9] opacity-10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
+                    <div class="flex items-center gap-4 mb-8 relative z-10">
+                        <div class="w-14 h-14 rounded-full bg-[#0ea5e9] text-black flex items-center justify-center">
+                            <i class="w-7 h-7" data-lucide="briefcase"></i>
+                        </div>
+                        <h3 class="text-2xl font-medium">Dark Card Pattern</h3>
+                    </div>
+                    <ul class="space-y-6 relative z-10">
+                        <li class="flex gap-4 items-start">
+                            <div class="mt-1 bg-[#0ea5e9]/20 text-[#0ea5e9] rounded-full p-1"><i class="w-3 h-3" data-lucide="check"></i></div>
+                            <div>
+                                <h4 class="font-medium text-lg">Dark List Item</h4>
+                                <p class="text-neutral-400 mt-1">Dark mode text description here.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Hover Card -->
+                <div class="bg-white rounded-[2rem] p-8 relative overflow-hidden group hover:shadow-xl transition-all duration-300 border border-neutral-100">
+                    <div class="relative z-10">
+                        <span class="text-6xl font-medium text-[#0ea5e9]/50 absolute -top-4 -right-4">1</span>
+                        <div class="w-12 h-12 bg-black rounded-full flex items-center justify-center mb-6 text-white">
+                            <i class="w-6 h-6" data-lucide="smartphone"></i>
+                        </div>
+                        <h3 class="text-xl font-medium mb-3">Hover Card Pattern</h3>
+                        <p class="text-base text-neutral-500 leading-relaxed">Hover to see shadow effect transition-all duration-300.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Accordion -->
+                <div class="space-y-4">
+                    <details class="group bg-neutral-50 p-6 rounded-2xl cursor-pointer">
+                        <summary class="flex justify-between items-center font-medium list-none">
+                            <span>FAQ Accordion Item</span>
+                            <span class="transition group-open:rotate-180"><i class="w-5 h-5" data-lucide="chevron-down"></i></span>
+                        </summary>
+                        <p class="text-neutral-600 mt-4 text-sm leading-relaxed">Expandable details block pattern with rotate animation on icon.</p>
+                    </details>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- 4) Layout & Spacing -->
+<section id="ds-layout" class="max-w-7xl mx-auto px-6 mt-24">
+    <h2 class="text-3xl font-medium tracking-tight mb-8 border-b border-neutral-100 pb-4">4. Layout & Spacing</h2>
+    
+    <div class="space-y-12">
+        <div>
+            <h3 class="text-xl font-medium mb-4">Container & Section Wrapping</h3>
+            <div class="bg-neutral-100 border border-neutral-200 p-4 rounded-xl text-center">
+                <code class="text-sm">max-w-7xl mx-auto px-6</code>
+                <div class="mt-2 text-xs text-neutral-500">Standard section container, limits max width and centers it, applying side paddings.</div>
+            </div>
+        </div>
+
+        <div>
+            <h3 class="text-xl font-medium mb-4">2-Column Grid (Features)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12 border-2 border-dashed border-neutral-200 p-4 rounded-xl">
+                <div class="bg-neutral-100 h-32 rounded-xl flex items-center justify-center text-sm text-neutral-500">Column 1</div>
+                <div class="bg-neutral-100 h-32 rounded-xl flex items-center justify-center text-sm text-neutral-500">Column 2</div>
+            </div>
+            <p class="text-xs text-neutral-500 mt-2 font-mono">grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12</p>
+        </div>
+
+        <div>
+            <h3 class="text-xl font-medium mb-4">3-Column Grid (Steps)</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 border-2 border-dashed border-neutral-200 p-4 rounded-xl">
+                <div class="bg-neutral-100 h-32 rounded-xl flex items-center justify-center text-sm text-neutral-500">Col 1</div>
+                <div class="bg-neutral-100 h-32 rounded-xl flex items-center justify-center text-sm text-neutral-500">Col 2</div>
+                <div class="bg-neutral-100 h-32 rounded-xl flex items-center justify-center text-sm text-neutral-500">Col 3</div>
+            </div>
+            <p class="text-xs text-neutral-500 mt-2 font-mono">grid grid-cols-1 md:grid-cols-3 gap-8</p>
+        </div>
+
+        <div>
+            <h3 class="text-xl font-medium mb-4">Stats Flex Layout</h3>
+            <div class="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-12 border-2 border-dashed border-neutral-200 p-8 rounded-xl bg-neutral-50">
+                <div class="bg-neutral-200 w-24 h-12 rounded"></div>
+                <div class="w-px h-12 bg-neutral-300 hidden md:block"></div>
+                <div class="bg-neutral-200 w-24 h-12 rounded"></div>
+                <div class="w-px h-12 bg-neutral-300 hidden md:block"></div>
+                <div class="bg-neutral-200 w-24 h-12 rounded"></div>
+            </div>
+            <p class="text-xs text-neutral-500 mt-2 font-mono">flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-12</p>
+        </div>
+    </div>
+</section>
+
+<!-- 5) Motion & Interaction -->
+<section id="ds-motion" class="max-w-7xl mx-auto px-6 mt-24">
+    <h2 class="text-3xl font-medium tracking-tight mb-8 border-b border-neutral-100 pb-4">5. Motion & Interaction</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Hover Lift & Shadow -->
+        <div class="bg-white rounded-[2rem] p-8 relative overflow-hidden group hover:shadow-xl hover:-translate-y-1 transition-all duration-300 border border-neutral-100 flex flex-col items-center justify-center text-center h-48 cursor-pointer">
+            <i class="w-8 h-8 mb-4 text-neutral-400 group-hover:text-black transition-colors" data-lucide="mouse-pointer-click"></i>
+            <h3 class="font-medium">Card Hover</h3>
+            <p class="text-xs text-neutral-500 mt-2">hover:shadow-xl transition-all duration-300</p>
+        </div>
+
+        <!-- Button Scale -->
+        <div class="bg-neutral-50 rounded-[2rem] border border-neutral-100 flex flex-col items-center justify-center p-8 h-48">
+            <button class="bg-black text-white text-base font-medium px-7 py-3.5 rounded-full hover:bg-neutral-800 transition-transform hover:scale-105">
+                Hover Me
+            </button>
+            <p class="text-xs text-neutral-500 mt-6">hover:scale-105 transition-transform</p>
+        </div>
+
+        <!-- Accordion Rotation -->
+        <div class="bg-neutral-50 rounded-[2rem] border border-neutral-100 flex flex-col items-center justify-center p-8 h-48">
+            <details class="group w-full bg-white p-4 rounded-xl cursor-pointer border border-neutral-200 shadow-sm">
+                <summary class="flex justify-between items-center font-medium list-none text-sm">
+                    <span>Click to Rotate</span>
+                    <span class="transition-transform group-open:rotate-180"><i class="w-5 h-5" data-lucide="chevron-down"></i></span>
+                </summary>
+                <div class="text-xs text-neutral-500 mt-4">group-open:rotate-180</div>
+            </details>
+        </div>
+    </div>
+</section>
+
+<!-- 6) Icons -->
+<section id="ds-icons" class="max-w-7xl mx-auto px-6 mt-24 mb-32">
+    <h2 class="text-3xl font-medium tracking-tight mb-8 border-b border-neutral-100 pb-4">6. Icons (Lucide)</h2>
+    
+    <p class="text-neutral-500 mb-8">O projeto utiliza ícones da biblioteca Lucide. O tamanho e a cor são controlados via classes utilitárias do Tailwind.</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+        <div class="flex flex-col items-center gap-3 bg-neutral-50 p-6 rounded-2xl border border-neutral-100">
+            <i class="w-6 h-6" data-lucide="bird"></i>
+            <span class="text-xs text-neutral-500 font-mono">bird</span>
+        </div>
+        <div class="flex flex-col items-center gap-3 bg-neutral-50 p-6 rounded-2xl border border-neutral-100">
+            <i class="w-6 h-6" data-lucide="car-front"></i>
+            <span class="text-xs text-neutral-500 font-mono">car-front</span>
+        </div>
+        <div class="flex flex-col items-center gap-3 bg-neutral-50 p-6 rounded-2xl border border-neutral-100">
+            <i class="w-6 h-6" data-lucide="car"></i>
+            <span class="text-xs text-neutral-500 font-mono">car</span>
+        </div>
+        <div class="flex flex-col items-center gap-3 bg-neutral-50 p-6 rounded-2xl border border-neutral-100">
+            <i class="w-6 h-6" data-lucide="graduation-cap"></i>
+            <span class="text-xs text-neutral-500 font-mono">graduation-cap</span>
+        </div>
+        <div class="flex flex-col items-center gap-3 bg-neutral-50 p-6 rounded-2xl border border-neutral-100">
+            <i class="w-6 h-6" data-lucide="briefcase"></i>
+            <span class="text-xs text-neutral-500 font-mono">briefcase</span>
+        </div>
+        <div class="flex flex-col items-center gap-3 bg-neutral-50 p-6 rounded-2xl border border-neutral-100">
+            <i class="w-6 h-6" data-lucide="check"></i>
+            <span class="text-xs text-neutral-500 font-mono">check</span>
+        </div>
+    </div>
+
+    <h3 class="text-xl font-medium mb-4 mt-12">Sizing Examples</h3>
+    <div class="flex flex-wrap items-end gap-8 bg-neutral-50 p-8 rounded-2xl border border-neutral-100">
+        <div class="flex flex-col items-center gap-2"><i class="w-3 h-3" data-lucide="circle"></i><span class="text-xs text-neutral-500">w-3 h-3</span></div>
+        <div class="flex flex-col items-center gap-2"><i class="w-4 h-4" data-lucide="circle"></i><span class="text-xs text-neutral-500">w-4 h-4</span></div>
+        <div class="flex flex-col items-center gap-2"><i class="w-5 h-5" data-lucide="circle"></i><span class="text-xs text-neutral-500">w-5 h-5</span></div>
+        <div class="flex flex-col items-center gap-2"><i class="w-6 h-6" data-lucide="circle"></i><span class="text-xs text-neutral-500">w-6 h-6</span></div>
+        <div class="flex flex-col items-center gap-2"><i class="w-7 h-7" data-lucide="circle"></i><span class="text-xs text-neutral-500">w-7 h-7</span></div>
+        <div class="flex flex-col items-center gap-2"><i class="w-10 h-10" data-lucide="circle"></i><span class="text-xs text-neutral-500">w-10 h-10</span></div>
+    </div>
+</section>
+
+</main>
+
+<script>
+    // Initialize Lucide icons
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+</script>
+</body>
+</html>
