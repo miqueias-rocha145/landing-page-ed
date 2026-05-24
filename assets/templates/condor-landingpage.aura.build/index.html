@@ -44,6 +44,10 @@
             .slide-bg-3 { background-image: linear-gradient(to bottom, #0ea5e9 0%, #0ea5e9 35%, rgba(14,165,233,0.85) 55%, transparent 85%), url('../../../assets/imgs/foto_vaga_hero3.jpg'); background-position: 60% center; }
             .slide-bg-4 { background-image: linear-gradient(to bottom, #0ea5e9 0%, #0ea5e9 35%, rgba(14,165,233,0.85) 55%, transparent 85%), url('../../../assets/imgs/foto_vaga_hero4.jpg'); background-position: 60% center; }
         }
+        
+        /* Efeito de Surgimento (Scroll Reveal) */
+        .reveal-up { opacity: 0; transform: translateY(30px); transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1); }
+        .reveal-up.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body class="bg-white text-neutral-900 antialiased selection:bg-[#0ea5e9] selection:text-black">
@@ -52,8 +56,8 @@
 <nav class="sticky top-0 z-50 w-full bg-white/80 backdrop-blur-md border-b border-neutral-100">
     <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <div class="flex items-center gap-3">
-            <img src="../../../assets/imgs/E&D.png" alt="Logo E&D" class="w-12 h-12 md:w-14 md:h-14 rounded-full object-contain" />
-            <span class="text-lg font-medium tracking-tight">E&D - MÃO DE OBRA</span>
+            <img src="../../../assets/imgs/E&D.png" alt="Logo E&D" class="w-8 h-8 rounded-full bg-black flex items-center justify-center" />
+            <span class="text-lg font-medium tracking-tight">E&D MÃO DE OBRA</span>
         </div>
         <div class="hidden md:flex items-center gap-8 text-sm font-medium text-neutral-500">
             <a class="hover:text-black transition-colors" href="#">Hotelaria</a>
@@ -62,7 +66,7 @@
             <a class="hover:text-black transition-colors" href="#">Sobre nós</a>
         </div>
         <div class="flex items-center gap-4">
-            <a class="bg-[#0ea5e9] text-black text-sm font-medium px-5 py-2.5 rounded-full hover:bg-[#0284c7] transition-colors flex items-center gap-2" href="#">
+            <a class="bg-black text-white text-sm font-medium px-5 py-2.5 rounded-full hover:bg-neutral-800 transition-colors flex items-center gap-2" href="#">
                 <span>Fale Conosco</span>
             </a>
         </div>
@@ -178,28 +182,37 @@
         </div>
     </section>
 </main>
-<section class="max-w-7xl mx-auto px-6 py-12 border-b border-neutral-100">
+
+<section class="max-w-7xl mx-auto px-6 py-12 border-b border-neutral-100 reveal-up">
     <div class="flex flex-wrap justify-center md:justify-between items-center gap-8 md:gap-12">
-        <div class="text-center md:text-left">
-            <p class="text-3xl font-semibold tracking-tight">Nova Lei</p>
-            <p class="text-sm text-neutral-500">Baseado na Res. 1.020/2025</p>
+        <!-- Item 1 (O que você inseriu - Tradição) -->
+        <div class="text-center">
+            <p class="text-3xl font-semibold tracking-tight">Experiência</p>
+            <p class="text-sm text-neutral-500">Desde 2010 prestando serviço de qualidade</p>
         </div>
         <div class="w-px h-12 bg-neutral-200 hidden md:block"></div>
-            <div class="text-center md:text-left">
-                <p class="text-3xl font-semibold tracking-tight text-[#0ea5e9]">-30%</p>
-                <p class="text-sm text-neutral-500">Custo Médio da CNH</p>
+        
+        <!-- Item 2 (Dor B2B: Faltas e Burocracia) -->
+        <div class="text-center">
+            <p class="text-3xl font-semibold tracking-tight text-[#0ea5e9]">Zero Faltas</p>
+            <p class="text-sm text-neutral-500">Reposição imediata e gestão de RH inclusa</p>
         </div>
         <div class="w-px h-12 bg-neutral-200 hidden md:block"></div>
-            <div class="text-center md:text-left">
-                <p class="text-3xl font-semibold tracking-tight">100%</p>
-                <p class="text-sm text-neutral-500">Segurança Jurídica</p>
-        </div>
-        <div class="w-px h-12 bg-neutral-200 hidden md:block"></div>
-            <div class="text-center md:text-left">
-                <p class="text-3xl font-semibold tracking-tight">24h</p>
-                <p class="text-sm text-neutral-500">Liberdade de Agenda</p>
+        
+        <!-- Item 3 (Dor B2B: Processos Trabalhistas) -->
+        <div class="text-center">
+            <p class="text-3xl font-semibold tracking-tight">100%</p>
+            <p class="text-sm text-neutral-500">Segurança contra passivos trabalhistas</p>
         </div>
     </div>
+</section>
+
+<!-- The Problem/Solution -->
+<section class="max-w-7xl mx-auto px-6 py-20 text-center">
+    <h2 class="text-3xl md:text-4xl font-medium tracking-tight mb-6 max-w-2xl mx-auto typewriter-effect">Menos burocracia, mais operação, mais resultado!</h2>
+    <p class="text-lg text-neutral-500 max-w-3xl mx-auto leading-relaxed reveal-up" style="transition-delay: 800ms;">
+        Terceirizamos operações estratégicas para que sua empresa reduza custos, ganhe produtividade e tenha acesso rápido a mão de obra qualificada, sem a complexidade de processos internos demorados.
+    </p>
 </section>
 
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -219,6 +232,43 @@
         loop: true,
         grabCursor: true
     });
+    
+    // Intersection Observer para animações de surgimento no scroll
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                
+                // Lógica do Efeito Máquina de Escrever
+                if (entry.target.classList.contains('typewriter-effect')) {
+                    const spans = entry.target.querySelectorAll('span');
+                    spans.forEach((span, index) => {
+                        setTimeout(() => {
+                            span.style.opacity = '1';
+                        }, index * 35); // 35ms por letra para um efeito dinâmico e natural
+                    });
+                }
+                
+                observer.unobserve(entry.target); // Anima apenas a primeira vez
+            }
+        });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+    // Preparar elementos de máquina de escrever (evita pulos no layout mantendo a altura)
+    document.querySelectorAll('.typewriter-effect').forEach(el => {
+        const text = el.textContent.trim();
+        el.textContent = '';
+        for (let i = 0; i < text.length; i++) {
+            const span = document.createElement('span');
+            span.textContent = text[i];
+            span.style.opacity = '0';
+            span.style.transition = 'opacity 0.05s ease-in';
+            el.appendChild(span);
+        }
+        observer.observe(el);
+    });
+
+    document.querySelectorAll('.reveal-up').forEach((el) => observer.observe(el));
 </script>
 </body>
 </html>
