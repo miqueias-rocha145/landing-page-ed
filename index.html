@@ -119,6 +119,18 @@ p, li, .text-pretty {
     color: #0EA5E9 !important;
   }
 }
+
+/* Ajuste para telas grandes (ex: 1920x1080) para o conteúdo não ficar fino e as laterais muito grandes */
+@media (min-width: 1440px) {
+  .max-w-7xl {
+    max-width: 1600px !important;
+  }
+}
+@media (min-width: 1920px) {
+  .max-w-7xl {
+    max-width: 1800px !important;
+  }
+}
 </style></head>
 <body class="antialiased font-[Inter] bg-slate-50 sm:bg-slate-900">
 <main class="max-w-7xl mx-auto sm:px-6 lg:px-8 sm:py-12">
