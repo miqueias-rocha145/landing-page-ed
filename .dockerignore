@@ -1,5 +1,6 @@
 .git
 .gitignore
-Dockerfile
-.dockerignore
+.agents
+.codex
+PRD.md
 README.md

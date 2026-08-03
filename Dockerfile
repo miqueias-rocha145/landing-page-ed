@@ -1,11 +1,12 @@
-# Imagem leve do Nginx para servir arquivos estáticos
 FROM nginx:alpine
 
-# Copia os arquivos do projeto para a pasta do Nginx
-COPY . /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY index.html /usr/share/nginx/html/index.html
+COPY assets /usr/share/nginx/html/assets
 
-# Expõe a porta 80
 EXPOSE 80
 
-# Comando para rodar o Nginx no primeiro plano
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+  CMD wget -q -O /dev/null http://127.0.0.1/ || exit 1
+
 CMD ["nginx", "-g", "daemon off;"]
