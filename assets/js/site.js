@@ -8,6 +8,12 @@
   const navLinks = menuLinks.filter((link) => link.getAttribute('href')?.startsWith('#'));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  if (window.location.protocol === 'file:') {
+    document.querySelectorAll('a[href="/vagas"]').forEach((link) => {
+      link.setAttribute('href', 'vagas.html');
+    });
+  }
+
   const setTheme = (theme) => {
     root.dataset.theme = theme;
     try { localStorage.setItem('ed-theme', theme); } catch (_) { }

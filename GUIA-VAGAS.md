@@ -56,4 +56,4 @@ Abra `assets/data/vagas.js`, duplique o exemplo e preencha todos os campos. Use 
 - Vagas inativas e vagas após a data de expiração não aparecem no site.
 - O site mostra no máximo 24 vagas simultâneas.
 
-Antes de publicar, revise a arte no celular, confira os dados textuais do cadastro e teste o botão do WhatsApp na página `vagas.html`.
+Antes de publicar, revise a arte no celular, confira os dados textuais do cadastro e teste o botão do WhatsApp na página pública `/vagas`.

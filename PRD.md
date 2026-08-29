@@ -161,7 +161,7 @@ Minimalista, institucional e contemporânea. Superfícies limpas, bastante respi
 - Navegação por âncoras com compensação para o cabeçalho.
 - Ano do rodapé atualizado automaticamente.
 - Funcionar sem framework e sem etapa de build.
-- Página estática `vagas.html` alimentada por `assets/data/vagas.js`, compatível com acesso local e Nginx.
+- Página pública `/vagas`, servida internamente pelo arquivo `vagas.html` e alimentada por `assets/data/vagas.js`, compatível com acesso local e Nginx.
 - Exibir somente vagas ativas e não expiradas, ordenadas pela publicação e limitadas a 24 oportunidades.
 - Filtrar vagas por local e regime de contratação.
 - Abrir a candidatura no WhatsApp com código e cargo da vaga preenchidos.
@@ -203,7 +203,7 @@ Minimalista, institucional e contemporânea. Superfícies limpas, bastante respi
 - Cabeçalho acompanha a rolagem em desktop e mobile.
 - Menu mobile funciona com mouse, toque e teclado.
 - Todos os CTAs de empresa e candidato abrem o destino correto.
-- Todos os acessos de candidatos na landing chegam a `vagas.html`.
+- Todos os acessos de candidatos na landing chegam a `/vagas`.
 - Vagas inativas e expiradas não aparecem; estados sem vagas e sem resultados são claros e acessíveis.
 - Não há rolagem horizontal entre 320 px e 1920 px.
 - Não há erros de JavaScript no carregamento.
