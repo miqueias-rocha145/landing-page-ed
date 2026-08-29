@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Consulte as vagas disponíveis na E&D Mão de Obra e Recursos Humanos e candidate-se diretamente pelo WhatsApp." />
+  <meta name="theme-color" content="#031328" />
+  <link rel="canonical" href="https://www.edrh.com.br/vagas.html" />
+  <link rel="icon" type="image/png" href="assets/imgs/logo-remove.png" />
+  <title>Vagas disponíveis | E&D Recursos Humanos</title>
+  <script>
+    (() => {
+      try {
+        const savedTheme = localStorage.getItem('ed-theme');
+        const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.dataset.theme = savedTheme || (systemDark ? 'dark' : 'light');
+      } catch (_) {
+        document.documentElement.dataset.theme = 'light';
+      }
+    })();
+  </script>
+  <link href="assets/css/fonts.css" rel="stylesheet" />
+  <link href="assets/css/site.css?v=20260828" rel="stylesheet" />
+  <link href="assets/css/vagas.css?v=20260828" rel="stylesheet" />
+</head>
+
+<body class="jobs-page">
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+
+  <header class="site-header" aria-label="Cabeçalho principal">
+    <nav class="nav-shell container" aria-label="Navegação principal">
+      <a class="brand" href="index.html" aria-label="E&D — voltar à página inicial">
+        <img class="brand__mark" src="assets/imgs/logo-remove.png" alt="Logo da E&D" width="94" height="94" />
+        <span class="brand__text">E&D Mão de Obra <small>Recursos Humanos</small></span>
+      </a>
+
+      <ul class="nav-menu" id="nav-menu">
+        <li><a href="index.html#servicos">Profissionais</a></li>
+        <li><a href="index.html#processo">Como funciona</a></li>
+        <li><a href="index.html#diferenciais">Diferenciais</a></li>
+        <li><a href="index.html#sobre">Sobre</a></li>
+        <li><a class="is-active" href="vagas.html" aria-current="page">Vagas</a></li>
+        <li><a href="index.html#duvidas">Dúvidas</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-button theme-toggle" id="theme-toggle" type="button" aria-label="Ativar modo escuro"
+          title="Ativar modo escuro">
+          <i class="sun" data-lucide="sun" aria-hidden="true"></i>
+          <i class="moon" data-lucide="moon" aria-hidden="true"></i>
+        </button>
+        <a class="button button--primary"
+          href="https://wa.me/557381830606?text=Ol%C3%A1%21%20Gostaria%20de%20falar%20com%20a%20E%26D."
+          target="_blank" rel="noopener">Fale conosco <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        <button class="icon-button menu-toggle" id="menu-toggle" type="button" aria-controls="nav-menu"
+          aria-expanded="false" aria-label="Abrir menu">
+          <i class="menu-icon-open" data-lucide="menu" aria-hidden="true"></i>
+          <i class="menu-icon-close" data-lucide="x" aria-hidden="true"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="jobs-hero" aria-labelledby="jobs-title">
+      <div class="container jobs-hero__inner">
+        <div class="jobs-hero__copy reveal">
+          <p class="eyebrow eyebrow--light">Oportunidades E&amp;D</p>
+          <h1 class="display" id="jobs-title">Vagas disponíveis</h1>
+          <p>Encontre uma oportunidade compatível com o seu perfil e fale diretamente com nossa equipe pelo WhatsApp.
+            A E&amp;D conecta profissionais a operações de hotelaria e hospitalidade na região.</p>
+        </div>
+        <div class="jobs-hero__counter reveal reveal--right" style="--delay: 100ms" aria-live="polite">
+          <span class="jobs-hero__counter-icon"><i data-lucide="briefcase-business" aria-hidden="true"></i></span>
+          <strong data-job-count>Carregando vagas...</strong>
+          <small>Atualização direta pela equipe E&amp;D</small>
+        </div>
+      </div>
+    </section>
+
+    <section class="jobs-section container" aria-labelledby="jobs-list-title">
+      <div class="jobs-section__heading reveal">
+        <div>
+          <p class="eyebrow">Banco de oportunidades</p>
+          <h2 class="title" id="jobs-list-title">Escolha uma vaga para se candidatar</h2>
+        </div>
+        <p>Clique na arte da vaga para abrir uma conversa com o código e o cargo já preenchidos.</p>
+      </div>
+
+      <form class="jobs-filters reveal" id="jobs-filters" aria-label="Filtros de vagas" hidden>
+        <div class="jobs-filter">
+          <label for="filter-local">Local</label>
+          <div class="select-shell">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <select id="filter-local" name="local">
+              <option value="">Todos os locais</option>
+            </select>
+            <i class="select-shell__chevron" data-lucide="chevron-down" aria-hidden="true"></i>
+          </div>
+        </div>
+        <div class="jobs-filter">
+          <label for="filter-contract">Regime de contratação</label>
+          <div class="select-shell">
+            <i data-lucide="file-check-2" aria-hidden="true"></i>
+            <select id="filter-contract" name="contrato">
+              <option value="">Todos os regimes</option>
+            </select>
+            <i class="select-shell__chevron" data-lucide="chevron-down" aria-hidden="true"></i>
+          </div>
+        </div>
+        <button class="button button--secondary jobs-filters__clear" id="clear-filters" type="button">
+          Limpar filtros <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+        </button>
+      </form>
+
+      <div class="jobs-grid" id="jobs-grid" aria-live="polite" hidden></div>
+
+      <noscript>
+        <div class="jobs-empty">
+          <h3>Ative o JavaScript para consultar as vagas</h3>
+          <p>Se preferir, fale diretamente com a equipe E&amp;D pelo WhatsApp.</p>
+          <a class="button button--primary" href="https://wa.me/557381830606" target="_blank" rel="noopener">Abrir
+            WhatsApp</a>
+        </div>
+      </noscript>
+
+      <div class="jobs-empty reveal" id="jobs-no-results" hidden>
+        <span class="jobs-empty__icon"><i data-lucide="search-x" aria-hidden="true"></i></span>
+        <h3>Nenhuma vaga corresponde aos filtros</h3>
+        <p>Tente selecionar outro local ou regime de contratação.</p>
+        <button class="button button--secondary" type="button" data-clear-filters>Limpar filtros</button>
+      </div>
+
+      <div class="jobs-empty jobs-empty--primary reveal" id="jobs-empty" hidden>
+        <span class="jobs-empty__icon"><i data-lucide="calendar-clock" aria-hidden="true"></i></span>
+        <p class="eyebrow">Novas oportunidades em breve</p>
+        <h3>Nenhuma vaga disponível no momento</h3>
+        <p>Nosso quadro de vagas é atualizado conforme surgem novas oportunidades. Se precisar falar com a equipe,
+          estamos disponíveis no WhatsApp.</p>
+        <a class="button button--primary"
+          href="https://wa.me/557381830606?text=Ol%C3%A1%21%20Gostaria%20de%20saber%20quando%20houver%20novas%20vagas."
+          target="_blank" rel="noopener">Falar com a E&amp;D <i data-lucide="message-circle"
+            aria-hidden="true"></i></a>
+      </div>
+    </section>
+
+    <section class="jobs-help container reveal reveal--scale" aria-labelledby="jobs-help-title">
+      <div>
+        <p class="eyebrow eyebrow--light">Precisa de ajuda?</p>
+        <h2 id="jobs-help-title">Fale com nossa equipe</h2>
+        <p>A candidatura é feita exclusivamente pelo WhatsApp. A E&amp;D não solicita pagamento para participar de
+          processos seletivos.</p>
+      </div>
+      <a class="button button--light" href="https://wa.me/557381830606" target="_blank" rel="noopener">
+        Abrir WhatsApp <i data-lucide="arrow-up-right" aria-hidden="true"></i>
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-main">
+        <div class="footer-brand">
+          <a class="brand" href="index.html" aria-label="E&D — voltar à página inicial">
+            <img class="brand__mark" src="assets/imgs/logo-remove.png" alt="" width="94" height="94" />
+            <span class="brand__text">E&D Mão de Obra <small>Recursos Humanos</small></span>
+          </a>
+          <p>Terceirização especializada para hotelaria de luxo e eventos de alto padrão.</p>
+        </div>
+        <div class="footer-column">
+          <h2>Navegação</h2>
+          <ul>
+            <li><a href="index.html#servicos">Profissionais</a></li>
+            <li><a href="index.html#processo">Como funciona</a></li>
+            <li><a href="index.html#sobre">Sobre a E&amp;D</a></li>
+            <li><a href="vagas.html" aria-current="page">Vagas disponíveis</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h2>Contato</h2>
+          <ul>
+            <li><a href="tel:+5573981830606">Telefone: (73) 9 8183-0606</a></li>
+            <li><a href="https://wa.me/557381830606" target="_blank" rel="noopener">WhatsApp: (73) 9 8183-0606</a>
+            </li>
+            <li><a href="mailto:edivaldo.pereira@edrh.com.br">edivaldo.pereira@edrh.com.br</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span data-current-year>2026</span> E&amp;D Mão de Obra e Recursos Humanos. Todos os direitos
+          reservados.</span>
+        <span>Porto Seguro, Bahia</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="whatsapp-float" href="https://wa.me/557381830606" target="_blank" rel="noopener"
+    aria-label="Conversar com a E&D pelo WhatsApp">
+    <i data-lucide="message-circle" aria-hidden="true"></i>
+  </a>
+
+  <script src="assets/js/lucide_latest_2eebd0ebe8c2.js"></script>
+  <script src="assets/js/site.js?v=20260828"></script>
+  <script src="assets/data/vagas.js"></script>
+  <script src="assets/js/vagas.js?v=20260828"></script>
+</body>
+
+</html>

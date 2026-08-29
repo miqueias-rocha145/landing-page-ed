@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1080" height="1920"
+  viewBox="0 0 1080 1920" role="img" aria-labelledby="title desc">
+  <title id="title">Modelo de divulgação de vaga E&amp;D para stories</title>
+  <desc id="desc">Template editável em proporção nove por dezesseis, com cargo, dados da vaga, atividades, requisitos e contato.</desc>
+  <defs>
+    <linearGradient id="header-gradient-story" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#031328" />
+      <stop offset="1" stop-color="#0B3154" />
+    </linearGradient>
+    <linearGradient id="footer-gradient-story" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#087FBD" />
+      <stop offset="1" stop-color="#0EA3E8" />
+    </linearGradient>
+    <style>
+      .display { font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif; }
+      .body { font-family: "Geist", "Segoe UI", Arial, sans-serif; }
+      .bullet { font-size: 32px; font-weight: 500; }
+    </style>
+  </defs>
+
+  <rect width="1080" height="1920" fill="#F3F8FC" />
+  <path d="M0 0h1080v340H0z" fill="url(#header-gradient-story)" />
+  <circle cx="1030" cy="20" r="270" fill="none" stroke="#70CDF5" stroke-opacity=".18" stroke-width="2" />
+  <circle cx="1030" cy="20" r="180" fill="#0EA3E8" fill-opacity=".08" />
+
+  <g id="marca">
+    <image x="96" y="96" width="112" height="112"
+      xlink:href="file:///C:/Users/mique/Documents/landing-page-ed/assets/imgs/logo-remove.png"
+      href="file:///C:/Users/mique/Documents/landing-page-ed/assets/imgs/logo-remove.png" />
+    <text class="display" x="232" y="142" fill="#FFFFFF" font-size="31" font-weight="750">E&amp;D Mão de Obra</text>
+    <text class="body" x="232" y="182" fill="#AFC3D6" font-size="22" font-weight="650" letter-spacing="3">RECURSOS HUMANOS</text>
+  </g>
+
+  <g id="status-e-codigo">
+    <rect x="716" y="100" width="268" height="64" rx="32" fill="#0EA3E8" />
+    <circle cx="756" cy="132" r="8" fill="#FFFFFF" />
+    <text class="display" x="782" y="143" fill="#FFFFFF" font-size="27" font-weight="750">Vaga aberta</text>
+    <text class="body" x="96" y="286" fill="#70CDF5" font-size="27" font-weight="700" letter-spacing="2">CÓDIGO: ED-AAAA-000</text>
+  </g>
+
+  <g id="cargo">
+    <text class="display" x="96" y="470" fill="#031328" font-size="82" font-weight="760" letter-spacing="-3">
+      <tspan x="96" dy="0">CARGO DA</tspan>
+      <tspan x="96" dy="94">VAGA</tspan>
+    </text>
+  </g>
+
+  <g id="dados-da-vaga" class="body" font-size="27" font-weight="650" fill="#16334F">
+    <rect x="96" y="626" width="280" height="64" rx="32" fill="#E0F3FC" />
+    <circle cx="132" cy="658" r="8" fill="#0EA3E8" />
+    <text x="158" y="668">Temporário</text>
+    <rect x="394" y="626" width="236" height="64" rx="32" fill="#E7EEF5" />
+    <circle cx="430" cy="658" r="8" fill="#087FBD" />
+    <text x="456" y="668">Escala 6×1</text>
+  </g>
+
+  <g id="atividades">
+    <rect x="96" y="790" width="9" height="43" rx="4" fill="#0EA3E8" />
+    <text class="display" x="130" y="825" fill="#031328" font-size="40" font-weight="750">Principais atividades</text>
+    <g class="body bullet" fill="#40566C">
+      <circle cx="108" cy="901" r="7" fill="#0EA3E8" /><text x="142" y="912">Primeira atividade principal da função</text>
+      <circle cx="108" cy="971" r="7" fill="#0EA3E8" /><text x="142" y="982">Segunda atividade em frase curta e direta</text>
+      <circle cx="108" cy="1041" r="7" fill="#0EA3E8" /><text x="142" y="1052">Terceira atividade, quando necessária</text>
+      <circle cx="108" cy="1111" r="7" fill="#0EA3E8" /><text x="142" y="1122">Quarta atividade, quando necessária</text>
+    </g>
+  </g>
+
+  <line x1="96" y1="1180" x2="984" y2="1180" stroke="#CBD9E5" stroke-width="2" />
+
+  <g id="requisitos">
+    <rect x="96" y="1242" width="9" height="43" rx="4" fill="#0EA3E8" />
+    <text class="display" x="130" y="1277" fill="#031328" font-size="40" font-weight="750">Requisitos</text>
+    <g class="body bullet" fill="#40566C">
+      <circle cx="108" cy="1353" r="7" fill="#0EA3E8" /><text x="142" y="1364">Primeiro requisito essencial para a vaga</text>
+      <circle cx="108" cy="1423" r="7" fill="#0EA3E8" /><text x="142" y="1434">Segundo requisito em frase curta</text>
+      <circle cx="108" cy="1493" r="7" fill="#0EA3E8" /><text x="142" y="1504">Terceiro requisito, quando necessário</text>
+    </g>
+  </g>
+
+  <g id="chamada">
+    <path d="M0 1640h1080v280H0z" fill="url(#footer-gradient-story)" />
+    <path d="M850 1640h230v280H710c118-62 163-151 140-280z" fill="#FFFFFF" fill-opacity=".07" />
+    <text class="display" x="96" y="1718" fill="#FFFFFF" font-size="43" font-weight="750">Candidate-se pelo WhatsApp</text>
+    <text class="display" x="96" y="1802" fill="#031328" font-size="57" font-weight="780">(73) 9 8183-0606</text>
+    <circle cx="922" cy="1760" r="62" fill="#FFFFFF" />
+    <path d="M899 1791l6-23a40 40 0 1 1 15 15l-21 8zm21-19 5 3a29 29 0 1 0-10-11l2 5-3 12 12-4z" fill="#0EA3E8" />
+  </g>
+</svg>

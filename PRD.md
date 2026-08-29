@@ -33,7 +33,7 @@ CTA principal: **Preciso de profissionais** / **Solicitar orçamento**.
 
 Necessidade: encontrar oportunidades de trabalho em hotéis e operações da região.
 
-Jornada principal: Hero → Caminho “Para candidatos” → Seção de oportunidades → WhatsApp.
+Jornada principal: Hero → Caminho “Para candidatos” → Página de vagas → Vaga escolhida → WhatsApp com código e cargo preenchidos.
 
 CTA principal: **Quero uma oportunidade** / **Quero me candidatar**.
 
@@ -54,7 +54,7 @@ A mensagem central combina a promessa existente — excelência em terceirizaç�
 7. Diferenciais da E&D.
 8. Segmentos atendidos.
 9. Sobre a empresa e conformidade.
-10. Captação de candidatos.
+10. Captação de candidatos com acesso à página de vagas.
 11. Perguntas frequentes.
 12. CTA comercial final.
 13. Rodapé com contatos reais.
@@ -161,6 +161,10 @@ Minimalista, institucional e contemporânea. Superfícies limpas, bastante respi
 - Navegação por âncoras com compensação para o cabeçalho.
 - Ano do rodapé atualizado automaticamente.
 - Funcionar sem framework e sem etapa de build.
+- Página estática `vagas.html` alimentada por `assets/data/vagas.js`, compatível com acesso local e Nginx.
+- Exibir somente vagas ativas e não expiradas, ordenadas pela publicação e limitadas a 24 oportunidades.
+- Filtrar vagas por local e regime de contratação.
+- Abrir a candidatura no WhatsApp com código e cargo da vaga preenchidos.
 
 ## 11. Acessibilidade
 
@@ -169,7 +173,7 @@ Minimalista, institucional e contemporânea. Superfícies limpas, bastante respi
 - Foco de teclado visível.
 - Contraste compatível com WCAG AA nas combinações principais.
 - Nomes acessíveis em botões e links de ícone.
-- Conteúdo e funções preservados com JavaScript desativado, exceto alternância de tema, menu mobile e animações.
+- Conteúdo institucional preservado com JavaScript desativado; tema, menu mobile, animações, filtros e carregamento das vagas dependem de JavaScript.
 - Suporte a redução de movimento.
 
 ## 12. SEO e compartilhamento
@@ -199,6 +203,8 @@ Minimalista, institucional e contemporânea. Superfícies limpas, bastante respi
 - Cabeçalho acompanha a rolagem em desktop e mobile.
 - Menu mobile funciona com mouse, toque e teclado.
 - Todos os CTAs de empresa e candidato abrem o destino correto.
+- Todos os acessos de candidatos na landing chegam a `vagas.html`.
+- Vagas inativas e expiradas não aparecem; estados sem vagas e sem resultados são claros e acessíveis.
 - Não há rolagem horizontal entre 320 px e 1920 px.
 - Não há erros de JavaScript no carregamento.
 - Animações não ocultam conteúdo quando a preferência de movimento reduzido está ativa.

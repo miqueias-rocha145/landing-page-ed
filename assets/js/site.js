@@ -4,7 +4,8 @@
   const menu = document.getElementById('nav-menu');
   const menuToggle = document.getElementById('menu-toggle');
   const themeToggle = document.getElementById('theme-toggle');
-  const navLinks = [...document.querySelectorAll('.nav-menu a[href^="#"]')];
+  const menuLinks = [...document.querySelectorAll('.nav-menu a')];
+  const navLinks = menuLinks.filter((link) => link.getAttribute('href')?.startsWith('#'));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const setTheme = (theme) => {
@@ -35,7 +36,7 @@
     document.body.classList.toggle('menu-open', willOpen);
   });
 
-  navLinks.forEach((link) => link.addEventListener('click', closeMenu));
+  menuLinks.forEach((link) => link.addEventListener('click', closeMenu));
 
   document.addEventListener('click', (event) => {
     if (!menu?.classList.contains('is-open')) return;

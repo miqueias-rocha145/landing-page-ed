@@ -1,0 +1,8 @@
+# Saídas locais do gerador de vagas
+tools/gerador-vagas/exports/
+
+# Rascunhos, prévias e exemplos não devem ser versionados
+assets/vagas/*-preview.*
+assets/vagas/*-rascunho.*
+assets/vagas/*-exemplo.*
+assets/vagas/.contato-revisao.*
