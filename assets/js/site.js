@@ -8,6 +8,11 @@
   const navLinks = menuLinks.filter((link) => link.getAttribute('href')?.startsWith('#'));
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  if (window.location.protocol !== 'file:' && /^\/index\.html\/?$/.test(window.location.pathname)) {
+    const cleanUrl = `/${window.location.search}${window.location.hash}`;
+    window.history.replaceState(null, '', cleanUrl);
+  }
+
   if (window.location.protocol === 'file:') {
     document.querySelectorAll('a[href="/vagas"]').forEach((link) => {
       link.setAttribute('href', 'vagas.html');
