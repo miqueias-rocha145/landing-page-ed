@@ -12,6 +12,14 @@
     document.querySelectorAll('a[href="/vagas"]').forEach((link) => {
       link.setAttribute('href', 'vagas.html');
     });
+
+    document.querySelectorAll('a[href="/"]').forEach((link) => {
+      link.setAttribute('href', 'index.html');
+    });
+
+    document.querySelectorAll('a[href^="/#"]').forEach((link) => {
+      link.setAttribute('href', `index.html${link.getAttribute('href').slice(1)}`);
+    });
   }
 
   const setTheme = (theme) => {

@@ -204,6 +204,7 @@ Minimalista, institucional e contemporânea. Superfícies limpas, bastante respi
 - Menu mobile funciona com mouse, toque e teclado.
 - Todos os CTAs de empresa e candidato abrem o destino correto.
 - Todos os acessos de candidatos na landing chegam a `/vagas`.
+- A página principal usa `/`; acessos legados a `/index.html` são redirecionados permanentemente, preservando as âncoras das seções.
 - Vagas inativas e expiradas não aparecem; estados sem vagas e sem resultados são claros e acessíveis.
 - Não há rolagem horizontal entre 320 px e 1920 px.
 - Não há erros de JavaScript no carregamento.
